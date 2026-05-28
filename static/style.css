@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F7F2;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   TÍTULOS GERAIS
+========================= */
+h1 {
+    text-align: center;
+    color: #556B2F;
+    margin-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #C9A227;
+}
+
+/* =========================
+   LOGIN
+========================= */
+.box {
+    background: white;
+    width: 350px;
+    margin: 80px auto;
+    padding: 25px;
+    border-radius: 12px;
+    border-top: 5px solid #C9A227;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.titulo {
+    background: #556B2F;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.titulo p {
+    margin: 5px 0 0 0;
+    color: #C9A227;
+    font-size: 12px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #556B2F;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3D4F1E;
+}
+
+/* =========================
+   TABELA CLIENTES
+========================= */
+table {
+    width: 85%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+th {
+    background: #556B2F;
+    color: #C9A227;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* LINKS */
+a {
+    color: #C9A227;
+    font-weight: bold;
+    text-decoration: none;
+}
+
