@@ -9,7 +9,7 @@ app = Flask(__name__,
             template_folder=os.path.join(caminho_base, "templates"),
             static_folder=os.path.join(caminho_base, "static"))
 
-app.secret_key = "123"
+app.secret_key = os.environ.get('Ferreira_2304', 'uma_chave_padrao_segura')
 
 # =========================
 # BANCO DE DADOS
@@ -64,7 +64,8 @@ def login():
         usuario = request.form["usuario"]
         senha = request.form["senha"]
 
-        if usuario == "admin" and senha == "123":
+        senha_correta = os.environ.get('MINHA_SENHA_SEGURA', '123')
+    if usuario == "admin" and senha == senha_correta:
             session["logado"] = True
             return redirect(url_for("clientes"))
 
