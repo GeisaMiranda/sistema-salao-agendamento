@@ -306,7 +306,7 @@ def deletar_agendamento(id):
 # =========================
 @app.route("/")
 def home():
-    return redirect(url_for("login"))
+    return "TESTE DE ATUALIZAÇÃO 123 - SE VOCÊ VÊ ISSO, O SITE ATUALIZOU!"
 
 if __name__ == "__main__":
     app.run(debug=True)
