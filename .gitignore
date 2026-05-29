@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+banco.db
+.env
+.vscode/
