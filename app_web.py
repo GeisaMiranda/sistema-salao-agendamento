@@ -9,7 +9,7 @@ app = Flask(__name__,
             template_folder=os.path.join(caminho_base, "templates"),
             static_folder=os.path.join(caminho_base, "static"))
 
-app.secret_key = os.environ.get('Ferreira_2304', 'uma_chave_padrao_segura')
+app.secret_key = os.environ.get('SECRET_KEY_APP', 'Jjg_123')
 
 # =========================
 # BANCO DE DADOS
@@ -59,18 +59,19 @@ conn.close()
 # =========================
 @app.route("/login", methods=["GET", "POST"])
 def login():
-
     if request.method == "POST":
         usuario = request.form["usuario"]
         senha = request.form["senha"]
-
+        
+        # Esta linha abaixo é a que busca a senha lá no Render
         senha_correta = os.environ.get('MINHA_SENHA_SEGURA', '123')
-    if usuario == "admin" and senha == senha_correta:
+        
+        if usuario == "admin" and senha == senha_correta:
             session["logado"] = True
             return redirect(url_for("clientes"))
-
+        
         return "Login inválido"
-
+    
     return """
     <!DOCTYPE html>
     <html>
